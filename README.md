@@ -17,7 +17,7 @@ UserParameter=custom.vz.cpu10[*],sudo /usr/sbin/vzlist -a -o laverage -H $1     
 
 UserParameter=custom.vz.usedmem[*],sudo /usr/sbin/vzlist -a -o physpages -H $1 | awk '{print $$1*4/1024}'
 ```
-* Copy the file **vzdiscover.sh** to **/var/lib/zabbix/scripts/vzdiscover.sh**
+* Copy the file **vzdiscover.sh** to **/var/lib/zabbix/scripts/vzdiscover.sh** and make it executable
 * Because vzlist could only executed as root, you need to add this line to your visudo list
 
 ```
